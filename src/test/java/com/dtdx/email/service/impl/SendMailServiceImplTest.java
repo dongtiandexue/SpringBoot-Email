@@ -21,33 +21,33 @@ public class SendMailServiceImplTest {
     @Test
     public void sendSimpleMail() {
 
-        MailBean mailBean = MailBean.builder().recipient("1542017576@qq.com").subject("springboot 邮件测试").content("这是一封测试邮件").build();
+        MailBean mailBean = MailBean.builder().recipient("1542017576@qq.com").subject("springboot 普通文本邮件").content("这是一封测试邮件").build();
         sendMailService.sendSimpleMail(mailBean);
 
     }
 
     @Test
     public void sendHtmlMail() {
-        MailBean mailBean = MailBean.builder().recipient("1542017576@qq.com").subject("springboot 邮件测试").content("这是一封测试邮件").build();
+        MailBean mailBean = MailBean.builder().recipient("1542017576@qq.com").subject("springboot html格式邮件").content("这是一封测试邮件").build();
         sendMailService.sendHtmlMail(mailBean);
 
     }
 
     @Test
     public void sendAttachmentMail() {
-        MailBean mailBean = MailBean.builder().recipient("1542017576@qq.com").subject("springboot 邮件测试").content("这是一封测试邮件").build();
+        MailBean mailBean = MailBean.builder().recipient("1542017576@qq.com").subject("springboot 附件邮件").content("这是一封测试邮件").build();
         sendMailService.sendAttachmentMail(mailBean);
     }
 
     @Test
     public void sendInlineMail() {
-        MailBean mailBean = MailBean.builder().recipient("1542017576@qq.com").subject("springboot 邮件测试").content("这是一封测试邮件").build();
+        MailBean mailBean = MailBean.builder().recipient("1542017576@qq.com").subject("springboot 静态资源邮件").content("这是一封测试邮件").build();
         sendMailService.sendAttachmentMail(mailBean);
     }
 
     @Test
     public void sendTemplateMail() {
-        MailBean mailBean = MailBean.builder().recipient("1542017576@qq.com").subject("springboot 邮件测试").content("这是一封测试邮件").build();
+        MailBean mailBean = MailBean.builder().recipient("1542017576@qq.com").subject("springboot 模板引擎邮件").content("这是一封测试邮件").build();
         sendMailService.sendTemplateMail(mailBean);
     }
 }
